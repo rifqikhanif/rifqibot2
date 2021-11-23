@@ -1,0 +1,31 @@
+case "brainly":
+        if (isBanned) return reply(mess.ban)
+        if (args.length < 1) return reply("Pertanyaan apa");
+        brien = args.join(" ");
+        brainly(`${brien}`).then((res) => {
+          teks = "â‰â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â‰\n";
+          for (let Y of res.data) {
+            teks += `\n*ã€Œ _BRAINLY_ ã€*\n\n*âž¸ Pertanyaan:* ${Y.pertanyaan}\n\n*âž¸ Jawaban:* ${Y.jawaban[0].text}\nâ‰â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â‰\n`;
+          }
+          syaa.sendMessage(from, teks, text, {
+            quoted: mek,
+            detectLinks: false,
+          });
+        });
+        break;
+
+
+
+
+case 'brainly':
+        if (isBanned) return reply(mess.ban)
+	    if (args.length < 1) return reply('Pertanyaan apa')
+		          	brien = args.join(' ')
+					brainly(`${brien}`).then(res => {
+					teks = '❉───────────────────────❉\n'
+					for (let Y of res.data) {
+					teks += `\n*「 _BRAINLY_ 」*\n\n*➸ Pertanyaan:* ${Y.pertanyaan}\n\n*➸ Jawaban:* ${Y.jawaban[0].text}\n❉──────────────────❉\n`
+					}
+					syaa.sendMessage(from, teks, text,{quoted:mek,detectLinks: false})                        
+		            })              
+					break
